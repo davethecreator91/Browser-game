@@ -1,0 +1,20 @@
+#mainTitle {
+    font-size: 50px;
+    padding: 24px;
+    position: center;
+}
+
+.startButton {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background-color: #ff043a;
+    border-radius: 4px;
+    border: 2px solid rgb(255, 60, 60);
+}
