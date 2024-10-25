@@ -23,7 +23,8 @@ const startScreen = document.getElementById ('startScreen');
 const buttonContainer = document.getElementById ('buttonContainer');
 const weekOne = document.createElement('weekOne');
 const mow = document.createElement('mow');
-const output = document.getElementById('output')
+const output = document.getElementById('output');
+const imageContainer = document.getElementById('imageContainer');
 
 
 // start of game 
@@ -40,6 +41,7 @@ startButton.addEventListener('click', () => {
     // startButton.style.fontSize = 30px ;
     weekOne.style.display = 'block';
     wallet.style.display = 'block'
+    imageContainer.style.backgroundImage = "url('../images/Ls2Cousin.png')";
     // console.log(backStory)
 });
 
@@ -61,10 +63,11 @@ weekOne.style.border = '2px solid black';
 let walletAmount = 0;
 let week = 1;
  
-if (buttonContainer) {
+// if (buttonContainer) { 
     weekOne.addEventListener('click', () => {
         console.log('clicked');
         backStory.innerHTML = 'Make that <span style="color: green;">schmuny</span>!';    weekOne.textContent = 'Mow!';
+        imageContainer.style.backgroundImage = "url('../images/LandscaperScissors.png')";
     // for (let week = 1; week <= 4; week ++) {
     incrementWallet(week);
     wallet.innerHTML = `You have $${walletAmount}`;
@@ -73,7 +76,7 @@ if (buttonContainer) {
 }); 
 // } else {
      
-} 
+// } 
 function incrementWallet (week) {
     let walletName = `mowWeek ${week}`;
     walletAmount += 100;
@@ -88,3 +91,21 @@ wallet.style.fontSize = '25px'
 // output.style.position = 
 // output.style.margin = '300px' 
 wallet.style.display = 'none'
+
+
+// images ========== //
+
+const Ls1Teeth = document.createElement('Ls1Teeth'); 
+img.src = images/Ls1Teeth.png
+img.alt = 'Week 1 Teeth Img'
+const Ls2Cousin = document.createElement('Ls2Cousin');
+Ls1Teeth.src = images/Ls2Cousin.png
+Ls1Teeth.alt = 'Week 2 Cousin Img'
+//create image container+properties
+// const imageContainer = document.createElement('image-container');
+// imageContainer.id = 'image-container';
+// imageContainer.className = 'container';
+//put on DOM
+document.body.appendChild(imageContainer);
+imageContainer.appendChild(Ls1Teeth);
+console.log(Ls1Teeth);

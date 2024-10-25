@@ -17,3 +17,12 @@
     background-color: green;
     border-radius: 4px;
 }
+
+#imageContainer {
+    width: 50vw;
+    height: 50vh;
+    border: 2px solid red;
+    background-image: url('../images/Ls1Teeth.png');
+    background-size: cover;
+    margin: auto;
+}
