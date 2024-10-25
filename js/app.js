@@ -39,15 +39,12 @@ startButton.addEventListener('click', () => {
     backStory.style.fontSize = '40px';
     // startButton.style.fontSize = 30px ;
     weekOne.style.display = 'block';
+    wallet.style.display = 'block'
     // console.log(backStory)
 });
 
-// ===== Week 1 ======== // 
-weekOne.addEventListener('click', () => {
-    // console.log('clicked');
-    backStory.innerHTML = 'Make that <span style="color: green;">schmuny</span>!';    weekOne.textContent = 'Mow!';
- 
-});
+// ===== Week 1 ======== //  
+
 
 weekOne.textContent = 'Start Week!'; 
 buttonContainer.appendChild(weekOne);
@@ -62,7 +59,21 @@ weekOne.style.border = '2px solid black';
 // Variable//
 
 let walletAmount = 0;
-
+let week = 1;
+ 
+if (buttonContainer) {
+    weekOne.addEventListener('click', () => {
+        console.log('clicked');
+        backStory.innerHTML = 'Make that <span style="color: green;">schmuny</span>!';    weekOne.textContent = 'Mow!';
+    // for (let week = 1; week <= 4; week ++) {
+    incrementWallet(week);
+    wallet.innerHTML = `You have $${walletAmount}`;
+    console.log (week); 
+// };
+}); 
+// } else {
+     
+} 
 function incrementWallet (week) {
     let walletName = `mowWeek ${week}`;
     walletAmount += 100;
@@ -70,12 +81,10 @@ function incrementWallet (week) {
     return `You have $${walletAmount}`;
     
 }
-for (let week = 1; week <= 4; week ++) {
-    incrementWallet(week);
-    console.log (week);
-};
 
-output.innerHTML= incrementWallet();
-output.style.fontSize = '25px'
+
+wallet.innerHTML= incrementWallet();
+wallet.style.fontSize = '25px'
 // output.style.position = 
-output.style.margin = '300px' 
+// output.style.margin = '300px' 
+wallet.style.display = 'none'
